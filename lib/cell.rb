@@ -2,11 +2,15 @@
 
 # store state of each cell in game board
 class Cell
-  attr_writer :occupied
-  attr_reader :symbol
+  attr_accessor :occupied, :value, :next_cell
 
-  def initialize(symbol, occupied: false)
-    @symbol = symbol
+  def initialize(next_cell = nil, value = '_', occupied: false)
+    @value = value
+    @next_cell = next_cell
     @occupied = occupied
+  end
+
+  def occupied?
+    occupied
   end
 end
