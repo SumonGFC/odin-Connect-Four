@@ -29,6 +29,16 @@ class Column
     cell.occupied = true # will return true
   end
 
+  def top
+    index = 0
+    list.each do |cell|
+      break if cell.occupied
+
+      index += 1
+    end
+    index
+  end
+
   private
 
   def append(cell)
