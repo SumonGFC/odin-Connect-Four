@@ -11,7 +11,7 @@ describe Column do
     end
 
     it 'should initialize a list containing ONLY Cell objects' do
-      expect(col.list).to all(be_an_instance_of Cell)
+      expect(col.list).to all(be_an_instance_of(Cell))
     end
 
     it 'should update reference to next_cell to point to next cell in list' do
